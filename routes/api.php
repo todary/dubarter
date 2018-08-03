@@ -19,7 +19,7 @@ Route::post('login','Api\AuthController@login');
 
 
 
-Route::group([ 'middleware' => ['throttle:100,10','auth:api']], function () {
+Route::group([ 'middleware' => ['throttle:20,60','auth:api']], function () {
 
     Route::post('/user', 'UserController@createUser');
     Route::put('/user/{email}', 'UserController@updateUser');
