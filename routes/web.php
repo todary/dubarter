@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 
 
-Route::group([ 'middleware' => ['throttle:3,10']], function () {
+Route::group([ 'middleware' => ['throttle:20,60']], function () {
 
     Route::get('/user/{email}', 'UserController@getUserByEmail');
     Route::get('/users', 'UserController@getUsers');
