@@ -42,12 +42,21 @@ If you don't have composer, you can get it from [Composer](https://getcomposer.o
 ## How to  Run the application
 
 After composer install remove (.example) from .env.example and change director permission if use Linux os you can access from localhost on
+
+
+
  
 make migration
 
 ```
 php artisan migrate
 ```
+
+To install passport correctly  
+```
+php artisan passport:install
+```
+
 
 ###To register new user 
 
