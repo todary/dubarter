@@ -24,20 +24,8 @@ Route::group([ 'middleware' => ['throttle:20,60']], function () {
     Route::get('/user/{email}', 'UserController@getUserByEmail');
     Route::get('/users', 'UserController@getUsers');
 
-//    Route::get('/user/{user_id}', function (Request $request) {
-//        return response()->json(['name' => 'test']);
-//    });
 
 
 });
-
-
-
-//Route::group(['middleware' => ['auth:api']], function () {
-//    Route::get('/test', function (Request $request) {
-//        return response()->json(['name' => 'test']);
-//    });
-//});
-//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
